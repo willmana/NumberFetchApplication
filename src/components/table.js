@@ -60,7 +60,7 @@ const DataTable = ({ data, errorType, indexOfFirstDate, indexOfLastDate }) => {
   } else {
     return (
       <Jumbotron className="text-center">
-        There might be something wrong with the dates you have chosen.
+        There might be something wrong with the dates you have chosen. Please choose differently.
       </Jumbotron>
     )
   }
