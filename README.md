@@ -41,4 +41,8 @@ The application uses pagination to show only 5 fields of data at the time. Appli
 
 ## Other comments
 
-This application uses React Bootstrap. 
+This application uses React Bootstrap. I wasn't as familiar with this library but wanted to give it a try. I utilized multiple components from the Bootstrap library such as Jumbotron, Cards, Containers and Rows/Cols.
+
+I had few issues with the application that I couldn't find a simple fix. When using the pagination, it will redirect the application to path `!#` and may reload the page, since onClick wanted any href on call. Other issues I had was with vertical centering of the access key-field. I used Bootstrap's grid system and it worked as I wished excluding the vertical alignment of this one input field. I am not that pro with css and couldn't find a fix for this quite simple issue. Picture as a reference: 
+
+![Kuva](https://github.com/willmana/NumberFetchApplication/blob/master/img/center.png)
