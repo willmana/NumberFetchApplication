@@ -24,12 +24,17 @@ const Pagination = ({ datesPerPage, totalDates, paginate }) => {
 };
 
 const DataTable = ({ data, errorType, indexOfFirstDate, indexOfLastDate }) => {
-
+  const dateFormat = (date) => {
+    var mS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
+    var splitDate = date.split('-')
+    var month = mS[splitDate[1] - 1]
+    return splitDate[2] + ' ' + month + ' (' + splitDate[0]+ ')'
+  }
   if (errorType === 200) {
     const currentDates = data.slice(indexOfFirstDate, indexOfLastDate)
     return (
       <Table>
-        <thead >
+        <thead className ='text-center'>
           <tr>
             <th>conversation_count</th>
             <th>missed_chat_count</th>
@@ -37,14 +42,14 @@ const DataTable = ({ data, errorType, indexOfFirstDate, indexOfLastDate }) => {
             <th>Date</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className ='text-center'>
           {currentDates.map((dat, i) => {
             return (
               <tr key={i}>
                 <td>{dat.conversation_count}</td>
                 <td>{dat.missed_chat_count}</td>
                 <td>{dat.visitors_with_conversation_count}</td>
-                <td>{dat.date}</td>
+                <td>{dateFormat(dat.date)}</td>
               </tr>
             )
           })}
@@ -57,10 +62,16 @@ const DataTable = ({ data, errorType, indexOfFirstDate, indexOfLastDate }) => {
         It seems like your access key is invalid.
       </Jumbotron>
     )
-  } else {
+  } else if (errorType === 400) {
     return (
       <Jumbotron className="text-center">
         There might be something wrong with the dates you have chosen. Please choose differently.
+      </Jumbotron>
+    )
+  } else {
+    return (
+    <Jumbotron className="text-center">
+      Enter date range you wish to inspect and your access key.
       </Jumbotron>
     )
   }

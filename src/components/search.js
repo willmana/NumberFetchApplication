@@ -34,7 +34,8 @@ const Search = ({ getDates, startDate, handleStartChange, endDate, handleEndChan
                             value={accessToken}
                             onChange={handleTokenChange}
                         />
-                        <Button type="submit">
+                        {' '}
+                        <Button variant='secondary' type="submit">
                             Search
                         </Button>
                     </Col>
