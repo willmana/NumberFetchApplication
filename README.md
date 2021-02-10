@@ -29,3 +29,12 @@ When both dates and access key are valid, you will finally get access to the dat
 
 ![Kuva](https://github.com/willmana/NumberFetchApplication/blob/master/img/search.png)
 
+## Extra features
+
+The application stores your access key to local storage. After you close the application and open it again, it will populate your access key into its field. I chose to use local storage only for the access key, since I wanted to use 'demo-data' dates as default states in my useState constants. You will see this after reloading:
+
+![Kuva](https://github.com/willmana/NumberFetchApplication/blob/master/img/reload.png)
+
+The application uses pagination to show only 5 fields of data at the time. Application will calculate amount of pages needed accordingly in respect to the amount of data provided from the API. For example if your data fits to two pages application will show you this: 
+
+![Kuva](https://github.com/willmana/NumberFetchApplication/blob/master/img/pagination.png)
