@@ -56,17 +56,9 @@ const App = () => {
         setData([])
       })
   }
-  
+
   useEffect(() => {
-    const storedStart = window.localStorage.getItem('startDate')
-    const storedEnd = window.localStorage.getItem('endDate')
     const storedToken = window.localStorage.getItem('accessToken')
-    if (storedStart) {
-      setStartDate(storedStart)
-    }
-    if (storedEnd) {
-      setEndDate(storedEnd)
-    }
     if (storedToken) {
       setAccessToken(storedToken)
     }
@@ -90,6 +82,7 @@ const App = () => {
         accessToken={accessToken}
         handleTokenChange={handleTokenChange}
       />
+      <br/>
       <TotalNumbers
         data={data}
       />
