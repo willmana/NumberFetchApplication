@@ -38,3 +38,7 @@ The application stores your access key to local storage. After you close the app
 The application uses pagination to show only 5 fields of data at the time. Application will calculate amount of pages needed accordingly in respect to the amount of data provided from the API. For example if your data fits to two pages application will show you this: 
 
 ![Kuva](https://github.com/willmana/NumberFetchApplication/blob/master/img/pagination.png)
+
+## Other comments
+
+This application uses React Bootstrap. 
