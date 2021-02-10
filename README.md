@@ -24,3 +24,8 @@ If you input invalid access key, the application will notice this from 401 statu
 If you insert dates in a way that API wouldn't allow, the application will also notice this from 400 status code and informs you:
 
 ![Kuva](https://github.com/willmana/NumberFetchApplication/blob/master/img/wrongdates.png)
+
+When both dates and access key are valid, you will finally get access to the data you wish to inspect and see the following interface:
+
+![Kuva](https://github.com/willmana/NumberFetchApplication/blob/master/img/search.png)
+
