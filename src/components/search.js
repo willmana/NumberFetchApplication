@@ -28,8 +28,9 @@ const Search = ({ getDates, startDate, handleStartChange, endDate, handleEndChan
                             onChange={handleEndChange}
                         />
                     </Col>
-                    <Col md={{ span: 4 , offset: 4 }} >
+                    <Col md={{ span: 4 , offset: 4 }}>
                         <input
+                        
                             placeholder='Access key'
                             value={accessToken}
                             onChange={handleTokenChange}
